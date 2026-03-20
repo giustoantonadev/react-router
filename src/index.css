@@ -11,6 +11,9 @@ body {
   
 }
 
+main{
+  min-height: 74vh;
+}
 
 a {
   text-decoration: none;

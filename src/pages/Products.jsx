@@ -24,7 +24,7 @@ export default function Products() {
                             <div className="card-body d-flex flex-column">
                                 <h5 className="card-title">{product.title}</h5>
                                 <p className="card-text">${product.price}</p>
-                                {<p className="text-muted small">{product.description}</p>}
+                                {<p className="text-muted small">{product.description.slice(0, 80)}...</p>}
                             </div>
                             <div className="card-footer">{product.category}</div>
                         </div>
