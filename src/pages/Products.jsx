@@ -19,12 +19,12 @@ export default function Products() {
             <div className="row g-4 mt-2">
                 {products.map(product => (
                     <div className="col-12 col-md-6 col-lg-4 col-xl-3" key={product.id}>
-                        <div className="card" style={{ width: "20rem" }}>
+                        <div className="card border-0" style={{ width: "18rem", height: "50rem" }}>
                             <img src={product.image} className="card-img-top" style={{ objectFit: "contain" }} alt="img" />
-                            <div className="card-body">
+                            <div className="card-body d-flex flex-column">
                                 <h5 className="card-title">{product.title}</h5>
                                 <p className="card-text">${product.price}</p>
-                                {<p className="card-text">{product.description}</p>}
+                                {<p className="text-muted small">{product.description}</p>}
                             </div>
                             <div className="card-footer">{product.category}</div>
                         </div>
