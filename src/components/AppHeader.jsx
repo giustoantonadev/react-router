@@ -1,8 +1,12 @@
 import AppNavBar from "../layouts/AppNavBar"
 
-export default function AppHeader(){
+export default function AppHeader() {
 
-return(
-    <AppNavBar />
-)
+    return (
+        <header>
+
+            <AppNavBar />
+
+        </header>
+    )
 }
