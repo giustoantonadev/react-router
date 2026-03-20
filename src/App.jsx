@@ -8,6 +8,8 @@ import FaqPage from "./pages/FaqPage"
 import ShippingPage from "./pages/ShippingPage"
 import ReturnsPage from "./pages/ReturnsPage"
 import PrivacyPage from "./pages/PrivacyPage"
+import TermsPage from "./pages/TermsPage"
+import SupportPage from "./pages/SupportPage"
 
 
 
@@ -27,6 +29,8 @@ function App() {
             <Route path='/shipping' element={<ShippingPage />} />
             <Route path='/returns' element={<ReturnsPage />} />
             <Route path='/privacy' element={<PrivacyPage />} />
+            <Route path='/terms' element={<TermsPage />} />
+            <Route path='/support' element={<SupportPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
