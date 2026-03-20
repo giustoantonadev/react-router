@@ -1,7 +1,7 @@
 const footerMenu = [
     {
         id: 1,
-        link:'/about',
+        link:'/whoweare',
         text:'Chi siamo'
     },
     {
