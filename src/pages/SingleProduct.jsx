@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 
 export default function SingleProduct() {
@@ -7,29 +7,32 @@ export default function SingleProduct() {
     const navigate = useNavigate()
     const api_url = `https://fakestoreapi.com/products/${id}`
 
+    const [product, setProduct] = useState()
     useEffect(() => {
         fetch(api_url)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-
+                setProduct(data)
             })
             .catch(err => {
-                console.error(err)
+                navigate(-1)
             })
     }, [id, navigate])
 
-console.log("ID:", id)
+
 
     return (
         <>
             <div>
-                <h1>
-                    Id prodotto : {id}
-                </h1>
+                <h1>{product?.title}</h1>
+                <p className="text-muted">{product?.category}</p>
+                <img src={product?.image} width="200" />
+                <p>{product?.description}</p>
+                <h3>{product?.price} €</h3>
+                <button className="btn btn-secondary" onClick={() => navigate(-1)}>
+                    Torna indietro
+                </button>
             </div>
-
-
         </>
     )
 }
