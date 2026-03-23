@@ -3,11 +3,15 @@ import AppHeader from "../components/AppHeader";
 import AppFooter from "../components/AppFooter";
 
 
-export default function DefaultLayout(){
-    return(
-        <div>
+export default function DefaultLayout() {
+    return (
+        <div className="d-flex flex-column min-vh-100">
             <AppHeader />
-            <Outlet />
+ 
+            <main className="flex-grow-1">
+                <Outlet />
+            </main>
+
             <AppFooter />
         </div>
     )

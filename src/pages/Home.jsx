@@ -1,14 +1,59 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
     return (
         <>
-            <h1 className="text-center">Benvenuto nel nostro negozio online!</h1>
-            <div className="container">
-                <div className="row">
-                    <div className="col">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus provident, natus, commodi vero fugiat asperiores ex vitae autem, sunt libero obcaecati eligendi at reiciendis sapiente quisquam hic. Officiis, accusamus quo non ipsum, laboriosam, commodi facere nisi quis deserunt quaerat mollitia maiores distinctio! Soluta sunt deleniti animi sapiente veniam atque rem? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt nulla eaque doloribus architecto porro, vel ad culpa totam veritatis officia corporis id velit quibusdam voluptatum voluptatem minus distinctio deleniti reiciendis dolore fugit iusto voluptatibus iste. Est ut voluptates quia, consequuntur quaerat esse labore beatae facilis perspiciatis commodi magnam harum doloribus.</div>
-                    <div className="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque error est earum sint expedita. Ab tempora at eligendi reprehenderit optio doloremque! Nihil quisquam ex dicta quidem error, possimus ratione, magni labore voluptatem iusto deleniti praesentium saepe quas porro fuga illo enim consequatur aperiam. Tempore, nesciunt? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla laborum ea id quod aut soluta maxime debitis, magnam omnis eius sequi qui maiores possimus reiciendis temporibus ipsa consequatur labore repellat perferendis, perspiciatis sint, necessitatibus veritatis deleniti. Accusamus recusandae ab ea, error, minus eius illum nostrum quod pariatur non facere tenetur.Eum in iure rerum reprehenderit.</div>
-                    <div className="col">Lorem  Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fugit ab corporis autem vitae est ut inventore iure voluptate, molestias modi deleniti magni repellat maxime excepturi in aspernatur illo corrupti, aliquid consectetur eligendi! Quo in veritatis eos dolores facilis laborum ad. Laborum repellendus explicabo voluptate aperiam voluptatibus maiores, labore, reiciendis aliquam unde iusto accusamus ea quaerat autem excepturi consequatur saepe!ipsum dolor sit amet consectetur adipisicing elit. Asperiores mollitia aliquid error eius quod illum architecto praesentium fuga non dolorem. Placeat reprehenderit aut quia perferendis velit. Ab fugiat doloribus facilis mollitia iusto! Maxime tempora nihil cupiditate a, sit quam possimus ullam sint amet totam, libero accusantium officia ab consequuntur rerum.</div>
+            <main className="py-5">
+                <div className="container">
+                    <div className="row align-items-center g-5">
+                        <div className="col-md-6">
+                            <h1 className="display-4 fw-bold mb-3">
+                                Benvenuto nel nostro negozio online!
+                            </h1>
+                            <p className="lead text-muted mb-4">
+                                Scopri prodotti di qualità in modo
+                                semplice, veloce e intuitivo.
+                            </p>
+                            <Link
+                                to='/products'
+                                className="btn btn-dark btn-lg">
+                                Scopri i prodotti
+                            </Link>
+                        </div>
+
+                        <div className="col-md-6 text-center">
+                            <img src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop'
+                                alt='shopping img'
+                                className="img-fluid rounded-4 shadow"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row text-center mt-5 g-4">
+                        <div className="col-md-4">
+                            <h4>Qualità</h4>
+                            <p className="text-muted">
+                                Prodotti selezionati con attenzione.
+                            </p>
+                        </div>
+
+                        <div className="col-md-4">
+                            <h4>Semplicità</h4>
+                            <p className="text-muted">
+                                Navigazione chiara e intuitiva.
+                            </p>
+                        </div>
+
+                        <div className="col-md-4">
+                            <h4>Velocità</h4>
+                            <p className="text-muted">
+                                Accesso rapido ai nostri prodotti.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
+            </main>
 
         </>
     )
