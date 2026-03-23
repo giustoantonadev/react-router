@@ -8,6 +8,7 @@ export default function SingleProduct() {
     const api_url = `https://fakestoreapi.com/products/${id}`
 
     const [product, setProduct] = useState()
+
     useEffect(() => {
         fetch(api_url)
             .then(res => res.json())
@@ -23,15 +24,25 @@ export default function SingleProduct() {
 
     return (
         <>
-            <div>
-                <h1>{product?.title}</h1>
-                <p className="text-muted">{product?.category}</p>
-                <img src={product?.image} width="200" />
-                <p>{product?.description}</p>
-                <h3>{product?.price} €</h3>
-                <button className="btn btn-secondary" onClick={() => navigate(-1)}>
-                    Torna indietro
-                </button>
+            <div className="container p-5">
+                <div className="row">
+                    <h1 className="text-center">{product?.title}</h1>
+                    <p className="text-muted text-center">{product?.category}</p>
+                    <div className="col-12 col-md-5 shadow rounded-5">
+                        <img className="img-fluid" src={product?.image} width="300" />
+                    </div>
+
+                    <div className="col-12 col-md-7 text-start">
+                        <h5 className="text-start">{product?.description}</h5>
+                        <h3>{product?.price} €</h3>
+                        <button className="btn btn-secondary m-2" onClick={() => navigate(-1)}>
+                            Torna indietro
+                        </button>
+                        <button className="btn btn-secondary m-2" onClick={() => navigate(`/products/${Number(id) + 1}`)}>
+                            Prossimo Articolo
+                        </button>
+                    </div>
+                </div>
             </div>
         </>
     )
